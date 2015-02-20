@@ -30,7 +30,7 @@ public class wdscpage : MonoBehaviour {
     {
         //
         web.debug();
-        // 得到用户的所有卡
+		// Get all card users
         playerscard = web.getPlayCards();
 
     }
@@ -45,12 +45,12 @@ public class wdscpage : MonoBehaviour {
         switch (pageflag)
         {
             case 0:
-                {//初始显示
+		{//The initial display
 
                 }
                 break;
             case -1:
-                {//上一页
+					{//Previous
                     if (nowpage == 1)  //第1页,不能向上
                     {
                         return;
@@ -58,7 +58,7 @@ public class wdscpage : MonoBehaviour {
                 }
                 break;
             case 1:
-                {//下一页
+					{//Next
                     if (costcard.Count / 8.0 <= nowpage)  //最后1页,不能向下
                     {
                         return;
@@ -126,7 +126,9 @@ public class wdscpage : MonoBehaviour {
             }
             card8.Add(go);
             go.parent = transform;
-            //发送信息给它
+			//Send a message to it
+			Debug.LogError(a.cardid);
+			Debug.LogError(a.name);
             go.SendMessage("setinfo", a);
         }
     }
@@ -160,25 +162,25 @@ public class wdscpage : MonoBehaviour {
 
         switch (c)
         {
-            case CardClass.kwarrior: pagename.text = "战士";
+            case CardClass.kwarrior: pagename.text = "Warrior";
                 break;
-            case CardClass.khunter: pagename.text = "猎人";
+            case CardClass.khunter: pagename.text = "Hunter";
                 break;
-            case CardClass.kpaladin: pagename.text = "圣骑士";
+            case CardClass.kpaladin: pagename.text = "Paladin";
                 break;
-            case CardClass.kdruid: pagename.text = "德鲁伊";
+            case CardClass.kdruid: pagename.text = "Druid";
                 break;
-            case CardClass.krogue: pagename.text = "潜行者";
+            case CardClass.krogue: pagename.text = "Rogue";
                 break;
-            case CardClass.kmage: pagename.text = "法师";
+            case CardClass.kmage: pagename.text = "Mage";
                 break;
-            case CardClass.kpriest: pagename.text = "牧师";
+            case CardClass.kpriest: pagename.text = "Priest";
                 break;
-            case CardClass.kshama: pagename.text = "祭司萨满";
+            case CardClass.kshama: pagename.text = "Shaman";
                 break;
-            case CardClass.kwarlock: pagename.text = "术士";
+            case CardClass.kwarlock: pagename.text = "Warlock";
                 break;
-            case CardClass.kany: pagename.text = "中立";
+            case CardClass.kany: pagename.text = "Neutral";
                 break;
         }
         classcard.Clear();

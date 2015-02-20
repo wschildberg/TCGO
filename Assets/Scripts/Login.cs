@@ -30,18 +30,18 @@ public class Login : MonoBehaviour
             return;
         }
 
-        //可以进行登录
-        string res = web.login(username.text, password.text);
-        if (res.IndexOf("ok") != -1)
-        {
-            //登录成功
-            //载入
-            Application.LoadLevel("game");
-        }
-        else
-        {
-            showMsg(res);
-        }
+//        //可以进行登录
+//        string res = web.login(username.text, password.text);
+//        if (res.IndexOf("ok") != -1)
+      {
+          //登录成功
+           //载入
+           Application.LoadLevel("game");
+       }
+//        else
+//        {
+//            showMsg(res);
+//        }
     }
   
     void OnSubmit()

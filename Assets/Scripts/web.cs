@@ -50,7 +50,7 @@ public class web : MonoBehaviour
         //对比金钱数量
         if(Money > player.gold)
         {
-            return "失败:余额不足";
+			return "Failed: insufficient funds";
         }
         else
         {
@@ -84,7 +84,8 @@ public class web : MonoBehaviour
     public static List<set> getSets()
     {
         List<set> ret = new List<set>();
-        string str = webget("getsets.php?playid=" + player.id);
+        //string str = webget("getsets.php?playid=" + player.id);
+		string str = "2&TEST&2&id1*1/id2*1/id3*1/id4*1<br />";
         string[] sets = str.Replace("<br />", "@").Split('@');
 
         for (int x = 0; x < sets.Length;x++ )
@@ -147,8 +148,9 @@ public class web : MonoBehaviour
     /// <returns></returns>
     public static string login(string un, string pw)
     {
-        string res = webget("login.php?name=" + un + "&password=" + pw);
-        
+       // string res = webget("login.php?name=" + un + "&password=" + pw);
+		string res = "ok/1/Wagner/100/1000/id1/id2/id3/id4";
+
         if (res.IndexOf("ok")!=-1)
         {
             string[] s = res.Split('/');
@@ -157,11 +159,14 @@ public class web : MonoBehaviour
             player.expack = int.Parse(s[3]);
             player.gold = int.Parse(s[4]);
             player.rmb = 2000;
-            for(int x=5;x<s.Length;x++)
-            {
-                player.cards += s[x] + "/";
-            }
-           
+//            for(int x=5;x<s.Length;x++)
+//            {
+//                player.cards += s[x] + "/";
+//            }
+			for(int x=0;x<516;x++)
+			{
+				player.cards += "id"+(x+1) + "/";
+			}          
             
         }
        
@@ -194,7 +199,7 @@ public class web : MonoBehaviour
     {
       if (Application.isEditor)//如果是编辑器里!
       {
-          login("ningxiaoxiao", "1q2w3e");
+          login("wagner", "wagner");
           loadxml();
       }
     }

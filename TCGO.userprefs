@@ -1,0 +1,22 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\classfilter.cs">
+    <Files>
+      <File FileName="Assets\Scripts\open.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\boxMsgbox.cs" Line="15" Column="2" />
+      <File FileName="Assets\Scripts\wdscjm.cs" Line="129" Column="24" />
+      <File FileName="Assets\Scripts\boxcam.cs" Line="24" Column="2" />
+      <File FileName="Assets\Scripts\web.cs" Line="8" Column="1" />
+      <File FileName="Assets\Scripts\Login.cs" Line="43" Column="26" />
+      <File FileName="Assets\Scripts\cardset.cs" Line="97" Column="16" />
+      <File FileName="Assets\Scripts\wdscpage.cs" Line="184" Column="23" />
+      <File FileName="Assets\Scripts\classfilter.cs" Line="34" Column="23" />
+      <File FileName="Assets\Scripts\moshicardset.cs" Line="14" Column="17" />
+      <File FileName="Assets\Scripts\SetCard.cs" Line="56" Column="13" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
